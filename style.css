@@ -506,3 +506,41 @@ strong {
     color: var(--accent-blue);
     transform: rotate(180deg) translateX(10px);
 }
+
+/* Mobile Adaptation via Zoom Scaling */
+@media screen and (max-width: 480px) {
+    .container {
+        zoom: 0.22;
+        /* iPhone Mini / Smaller phones */
+        width: 1600px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    body {
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container {
+        zoom: 0.4;
+        /* Larger tablets / Foldables */
+        width: 1600px;
+        margin: 0 auto;
+    }
+
+    body {
+        padding: 0;
+    }
+}
+
+/* Tablet / Small Laptops */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        zoom: 0.55;
+        width: 1600px;
+        margin: 0 auto;
+    }
+}
