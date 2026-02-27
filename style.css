@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;700&family=Bebas+Neue&family=Old+Standard+TT:italic&display=swap');
+
+html {
+    font-size: 100%;
+}
+
+:root {
+    --bg-color: #f7f1e3;
+    /* Slightly warmer cream */
+    --text-color: #1a1a1a;
+    --border-color: #1a1a1a;
+    --accent-blue: #8fa8bc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    background-color: #d1ccc0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.4;
+    /* Improved line height for readability */
+    padding: 20px;
+}
+
+.dense-list {
+    font-size: 0.75rem;
+    margin-top: 5px;
+    padding-left: 12px;
+}
+
+.dense-list li {
+    margin-bottom: 2px;
+}
+
+.sub-label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #666;
+    margin-top: 15px;
+    display: block;
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+}
+
+.container {
+    max-width: 98%;
+    width: 1600px;
+    zoom: 0.75;
+    /* This simulates the 75% browser zoom the user requested */
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 50px 60px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: visible;
+}
+
+/* Paper texture overlay */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 10;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.title-section {
+    display: grid;
+    grid-template-columns: 160px 1fr 160px;
+    align-items: center;
+    border-bottom: 5px double var(--border-color);
+    padding: 10px 0;
+    margin-bottom: 25px;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 0.85;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.side-box {
+    border: 3px solid var(--border-color);
+    padding: 15px 5px;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    line-height: 0.9;
+    width: 100%;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr;
+    /* Wider side columns for side-by-side layouts */
+    gap: 45px;
+    /* Generous breathing room */
+}
+
+.left-col {
+    border-right: 1px solid #ccc;
+    padding-right: 15px;
+}
+
+.marcello-section {
+    text-align: left;
+}
+
+.portrait-circle {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border-color);
+    filter: sepia(0.2) contrast(1.1);
+}
+
+.vertical-text-container {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+    justify-content: center;
+    overflow: visible;
+}
+
+.vertical-title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5.5rem;
+    color: #445566;
+    line-height: 1.1;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.intro-text-box {
+    background-color: #a8c2d1;
+    padding: 15px;
+    font-size: 0.85rem;
+    color: white;
+    text-align: left;
+    width: 100%;
+}
+
+.rise-above {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 25px 0;
+    line-height: 0.85;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+    padding: 10px 0;
+    width: 100%;
+}
+
+.middle-col {
+    padding: 0 10px;
+}
+
+.section-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 15px;
+    display: block;
+    letter-spacing: 0.1rem;
+}
+
+.article {
+    margin-bottom: 50px;
+}
+
+.curatore-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    line-height: 0.85;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.black-tag {
+    background: black;
+    color: white;
+    padding: 3px 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.gusto-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--accent-blue);
+    line-height: 0.85;
+    margin-bottom: 15px;
+}
+
+.gray-tag {
+    background: #d1d1d1;
+    color: #444;
+    padding: 3px 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.right-col {
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+}
+
+.animation-section img,
+.article img,
+.footer-left img,
+.footer-middle img,
+.small-portrait {
+    filter: sepia(0.3) contrast(1.2) grayscale(0.8) brightness(0.95);
+    border: 1px solid var(--border-color);
+}
+
+.animation-section img,
+.article img,
+.footer-left img,
+.footer-middle img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.newspaper-image {
+    width: 100%;
+    margin-bottom: 15px;
+    filter: sepia(0.3) contrast(1.2) grayscale(0.8) brightness(0.95);
+    border: 1px solid var(--border-color);
+}
+
+.image-caption {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    border-left: 3px solid var(--accent-blue);
+    padding-left: 8px;
+    display: block;
+}
+
+.storia-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    /* Removed overflow: hidden to prevent clipping */
+}
+
+.small-portrait {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.storia-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    line-height: 0.85;
+}
+
+footer {
+    border-top: 5px double var(--border-color);
+    margin-top: 40px;
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: 240px 1fr 210px;
+    gap: 30px;
+}
+
+.footer-portrait {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    margin-bottom: 15px;
+}
+
+.footer-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: var(--accent-blue);
+    line-height: 0.9;
+    margin-bottom: 10px;
+}
+
+.vcj-banner {
+    background: black;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pdr-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    line-height: 0.85;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    /* Base paragraph size increased */
+    color: #333;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* Newspaper Style Enhancements */
+.double-divider {
+    border-top: 6px double var(--border-color);
+    margin: 40px 0;
+    width: 100%;
+    clear: both;
+}
+
+.filler-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 25px 0;
+    text-align: center;
+    font-family: 'Old Standard TT', serif;
+    font-style: italic;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.glyph-decorator {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #aaa;
+    margin: 20px 0;
+}
+
+.issue-tag {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.3rem;
+    color: #888;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.vertical-spacer {
+    height: 40px;
+}
+
+/* --- Professional Animations & Interactivity --- */
+
+/* Scroll Reveal States */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Micro-interactions */
+.article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article:hover {
+    transform: translateY(-5px);
+}
+
+.newspaper-image {
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease;
+    cursor: zoom-in;
+}
+
+.newspaper-image:hover {
+    transform: scale(1.03);
+    filter: sepia(0) contrast(1.1) grayscale(0) brightness(1);
+}
+
+.black-tag,
+.gray-tag {
+    transition: all 0.3s ease;
+}
+
+.black-tag:hover,
+.gray-tag:hover {
+    letter-spacing: 2px;
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+/* Keyframe Animations */
+@keyframes lineGrow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.double-divider {
+    overflow: hidden;
+}
+
+.reveal.active.double-divider {
+    animation: lineGrow 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes titleFade {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.main-title {
+    animation: titleFade 1.5s ease-out forwards;
+}
+
+/* Vertical Title Animation */
+.vertical-title {
+    transition: color 0.4s ease, transform 0.6s ease;
+}
+
+.article:hover~.vertical-title,
+.vertical-text-container:hover .vertical-title {
+    color: var(--accent-blue);
+    transform: rotate(180deg) translateX(10px);
+}
