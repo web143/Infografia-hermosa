@@ -33,7 +33,7 @@ body {
 }
 
 .dense-list {
-    font-size: 0.75rem;
+    font-size: 1.05rem;
     margin-top: 5px;
     padding-left: 12px;
 }
@@ -320,7 +320,7 @@ footer {
     margin-top: 40px;
     padding-top: 25px;
     display: grid;
-    grid-template-columns: 240px 1fr 210px;
+    grid-template-columns: 240px 1fr 280px;
     gap: 30px;
 }
 
@@ -352,14 +352,18 @@ footer {
 
 .pdr-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     line-height: 0.85;
     margin-bottom: 10px;
 }
 
+.footer-right {
+    padding-right: 40px;
+}
+
 p {
-    font-size: 1rem;
-    /* Base paragraph size increased */
+    font-size: 1.25rem;
+    /* Base paragraph size pushed for maximum readability */
     color: #333;
 }
 
