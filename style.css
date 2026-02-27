@@ -507,49 +507,49 @@ strong {
     transform: rotate(180deg) translateX(10px);
 }
 
-/* Mobile Adaptation via Zoom Scaling */
+/* Mobile/iPhone Adaptation (Fixed PC Look) */
 @media screen and (max-width: 480px) {
     body {
-        padding: 0;
         margin: 0;
+        padding: 0;
         overflow-x: hidden;
+        background-color: #d1ccc0;
+        display: block;
+    }
+
+    .container {
+        /* Forces the PC layout without moving anything */
+        width: 1600px !important;
+        max-width: none !important;
+        zoom: 1 !important;
+        /* Reset zoom (ignored on iOS anyway) */
+
+        /* Professional Scale (Zoom equivalent for mobile) */
+        transform: scale(0.23);
+        transform-origin: top left;
+        position: relative;
+
+        /* Precise Centering: 50% screen minus half of the scaled width (1600 * 0.23 / 2 = 184) */
+        left: calc(50% - 184px);
+
+        /* Removes empty space at the bottom caused by scale */
+        margin-bottom: -5000px;
+        box-shadow: none;
+    }
+}
+
+/* Tablet / Large Phones */
+@media screen and (min-width: 481px) and (max-width: 1200px) {
+    body {
         display: flex;
         justify-content: center;
         background-color: #d1ccc0;
     }
 
     .container {
-        zoom: 0.22;
-        /* Forces 1600px to fit in ~350px width */
+        zoom: 0.5;
         width: 1600px;
         max-width: none;
         margin: 0;
-        padding: 30px;
-        /* Reduced internal padding for mobile */
-        box-shadow: none;
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    body {
-        display: flex;
-        justify-content: center;
-        padding: 0;
-    }
-
-    .container {
-        zoom: 0.45;
-        width: 1600px;
-        max-width: none;
-        margin: 0;
-    }
-}
-
-/* Tablet / Small Laptops */
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-    .container {
-        zoom: 0.6;
-        width: 1600px;
-        margin: 0 auto;
     }
 }
